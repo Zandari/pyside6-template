@@ -1,7 +1,7 @@
 from typing import Optional
 from PySide6 import QtCore
 
-class TableModel(QtCore.QAbstractTableModel):
+class TableModel(QtCore.QAbstractListModel):
     ROW_COUNT    = 5
     COLUMN_COUNT = 5
 
@@ -9,13 +9,10 @@ class TableModel(QtCore.QAbstractTableModel):
         super(TableModel, self).__init__(**kwargs)
 
         self._data = [[i + j for i in range(self.COLUMN_COUNT)] 
-                      for j in range(self.ROW_COUNT)]
+                     for j in range(self.ROW_COUNT)]
 
     def rowCount(self, index: QtCore.QModelIndex) -> int:
         return self.ROW_COUNT
-
-    def columnCount(self, index: QtCore.QModelIndex) -> int:
-        return self.COLUMN_COUNT
 
     def data(self, index: QtCore.QModelIndex, role: int) -> Optional[int]:
         if role == QtCore.Qt.DisplayRole:

@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>resources/icons/list_alt.png</file>
+    <file>resources/icons/list.png</file>
+    <file>resources/icons/resume.png</file>
+    <file>resources/icons/settings.png</file>
+    <file>resources/icons/stop.png</file>
+    <file>resources/icons/web_asset.png</file>
+  </qresource>
+</RCC>
